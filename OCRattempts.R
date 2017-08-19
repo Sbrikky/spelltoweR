@@ -2,9 +2,15 @@
 library(tesseract)
 library(png)
 
+
 # Screen_default_raw <- ocr("Screenshot_default.png")
 # 
 # Screen_night_raw <- ocr("Screenshot_night.png")
+
+engine <- tesseract(options = list(tessedit_pageseg_mode = "7"))
+
+ocr("tempfile.png", engine = engine)
+ocr("Cropped_test.png", engine = engine)
 
 Screen_default_png <- readPNG("Screenshot_default.png")
 
