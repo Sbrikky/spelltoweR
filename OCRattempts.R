@@ -1,4 +1,4 @@
-# Peter's comment
+# Peter's comment is dumb
 library(tesseract)
 library(png)
 
