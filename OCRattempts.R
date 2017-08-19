@@ -1,3 +1,4 @@
+# Peter's comment
 library(tesseract)
 library(png)
 
