@@ -33,5 +33,8 @@ Letterrefs <- list(
   W = getLetter(Cropped_default,5,7),
   X = getLetter(Cropped_default,5,12),
   Y = getLetter(Cropped_default,5,9),
-  Z = getLetter(Cropped_default,4,12)
+  Z = getLetter(Cropped_default,4,12),
+  Empty = getLetter(Cropped_default,1,1)
 )
+
+save(Letterrefs, file = "Letterrefs.RData")
