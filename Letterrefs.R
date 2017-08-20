@@ -2,39 +2,39 @@ library(png)
 
 getLetter <- function(img,x,y) {
   # Subsets a specific letter from a spelltower based on xy coordinates starting from the topleft
-  letter <- img[(1+56*(y-1)):(56*y),(1+56*(x-1)):(56*x),]
+  letter <- img[(1+ 84*(y-1)):( 84*y),(1+ 84*(x-1)):( 84*x),]
 }
 
-Cropped_default <- readPNG("Cropped_test.png")
+Cropped_new <- readPNG("Cropped_new.png")
 
 Letterrefs <- list(
-  A = getLetter(Cropped_default,4,1),
-  B = getLetter(Cropped_default,8,6),
-  C = getLetter(Cropped_default,2,4),
-  D = getLetter(Cropped_default,3,4),
-  E = getLetter(Cropped_default,5,3),
-  F = getLetter(Cropped_default,4,9),
-  G = getLetter(Cropped_default,3,3),
-  H = getLetter(Cropped_default,5,8),
-  I = getLetter(Cropped_default,5,6),
-  J = getLetter(Cropped_default,6,3),
-  K = getLetter(Cropped_default,2,6),
-  L = getLetter(Cropped_default,6,9),
-  M = getLetter(Cropped_default,8,12),
-  N = getLetter(Cropped_default,2,1),
-  O = getLetter(Cropped_default,4,2),
-  P = getLetter(Cropped_default,2,7),
-  Q = getLetter(Cropped_default,6,1),
-  R = getLetter(Cropped_default,1,2),
-  S = getLetter(Cropped_default,6,6),
-  T = getLetter(Cropped_default,4,3),
-  U = getLetter(Cropped_default,3,7),
-  V = getLetter(Cropped_default,1,9),
-  W = getLetter(Cropped_default,5,7),
-  X = getLetter(Cropped_default,5,12),
-  Y = getLetter(Cropped_default,5,9),
-  Z = getLetter(Cropped_default,4,12),
-  Empty = getLetter(Cropped_default,1,1)
+  A = getLetter(Cropped_new,1,12),
+  B = getLetter(Cropped_new,1,11),
+  C = getLetter(Cropped_new,3,12),
+  D = getLetter(Cropped_new,8,11),
+  E = getLetter(Cropped_new,4,12),
+  F = getLetter(Cropped_new,3,7),
+  G = getLetter(Cropped_new,8,7),
+  H = getLetter(Cropped_new,5,7),
+  I = getLetter(Cropped_new,7,12),
+  J = getLetter(Cropped_new,2,3),
+  K = getLetter(Cropped_new,4,11),
+  L = getLetter(Cropped_new,7,11),
+  M = getLetter(Cropped_new,1,6),
+  N = getLetter(Cropped_new,7,10),
+  O = getLetter(Cropped_new,4,10),
+  P = getLetter(Cropped_new,8,1),
+  Q = getLetter(Cropped_new,2,5),
+  R = getLetter(Cropped_new,7,6),
+  S = getLetter(Cropped_new,6,5),
+  T = getLetter(Cropped_new,3,8),
+  U = getLetter(Cropped_new,4,5),
+  V = getLetter(Cropped_new,8,4),
+  W = getLetter(Cropped_new,1,10),
+  X = getLetter(Cropped_new,1,2),
+  Y = getLetter(Cropped_new,2,9),
+  Z = getLetter(Cropped_new,5,12),
+  Empty = getLetter(Cropped_new,6,12)
 )
 
 save(Letterrefs, file = "Letterrefs.RData")
